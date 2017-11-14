@@ -1,0 +1,503 @@
+// (function() {
+//     'use strict';
+//
+//     var MobileMenu = (function () {
+//
+//         var handleHeader = function() {
+//             var menuBtn = jQuery('.menu-trigger'),
+//                 naglowek = jQuery('#menu'),
+//                 top = jQuery('#top'),
+//                 body = jQuery('body');
+//
+//             menuBtn.on('click', function () {
+//                 menuBtn.toggleClass('menu-visible');
+//                 naglowek.toggleClass('menu-visible');
+//                 top.toggleClass('menu-visible');
+//             });
+//         }
+//
+//         function init() {
+//             handleHeader();
+//         }
+//
+//         return {
+//             init: init
+//         };
+//     })();
+//
+//     jQuery(document).ready(MobileMenu.init);
+//
+// })();
+
+// one page menu
+
+var lastId,
+    topMenu = $("#menu"),
+    topMenuHeight = topMenu.outerHeight() + 100;
+    menuItems = topMenu.find("a").slice(0,5),
+    scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+    });
+
+menuItems.click(function(e){
+
+    //$('.menu-trigger, #menu, #top').removeClass('menu-visible');
+    //$.magnificPopup.close();
+    var href = $(this).attr("href");
+    offsetTop = href === "#" ? 0 : $(href).offset().top;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 2000);
+
+    e.preventDefault();
+
+});
+
+$(window).scroll(function(){
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+
+    var cur = scrollItems.map(function(){
+        if ($(this).offset().top < fromTop)
+            return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+
+    if (lastId !== id) {
+        lastId = id;
+        menuItems
+            .removeClass("active")
+            .end().filter("[href='#"+id+"']").addClass("active");
+    }
+});
+
+// custom functions
+
+function cityDesignerHeight() {
+
+    var el = $('#city-garden .slide-01 .city-designer');
+    el.css('height', el.width() + 'px');
+
+}
+
+function floorHeight() {
+
+    $('#floor .sidebar').css('height', ($('#floor .building').height() - 3) + 'px');
+
+}
+
+function carouselHeight() {
+
+    var elH = $('#environment').height();
+    $('#environment .slide').css('height', elH / 2 + 'px');
+
+}
+
+function filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial) {
+    //$('.big-table-investments').show();
+    //$('.hide-table').show();
+    console.log('QUERY: pokoje: '+rooms+" pietro: "+floor+" access: "+access+" mdm: "+mdm + " uslugowy: "+commercial);
+    //console.log('mdm ' + mdm);
+    $('.table-slider table').css('top', '0px');
+    var count = 0;
+    $('table.data tbody tr').each(function() {
+        $(this).show();
+        if (
+            // ($(this).attr('attr-mdm') == mdm && mdm != 0) ||
+            // ($(this).attr('attr-size') < sizeFrom && sizeFrom != 0) ||
+            // ($(this).attr('attr-size') > sizeTo && sizeTo != 0) ||
+            // ($(this).attr('attr-floor') < floorFrom && floorFrom != 0) ||
+            // ($(this).attr('attr-floor') > floorTo && floorTo != 0) ||
+            ($(this).data('floor') != floor && floor != 0) ||
+            ($(this).data('rooms') != rooms && rooms != 0) ||
+            ($(this).data('area') < areaFrom && areaFrom != 0) ||
+            ($(this).data('area') > areaTo && areaTo != 0) ||
+            ($(this).data('access') == access && access != 0) ||
+            ($(this).data('mdm') != mdm && mdm != 0) ||
+            ($(this).data('commercial') != commercial && commercial != 0)
+        ) {
+            $(this).hide();
+        } else {
+            $(this).show();
+            count++;
+        }
+
+    });
+    //console.log(count);
+    $('.result-style').text(count);
+}
+
+// lacations map
+
+
+
+// others functions
+
+$(function() {
+
+    $('a[href^="#"]').click(function() {
+		$('html,body').animate({ scrollTop: $(this.hash).offset().top}, 500);
+		return false;
+		e.preventDefault();
+	});
+
+});
+
+
+
+$(document).ready(function () {
+
+    // custom functions
+
+    cityDesignerHeight();
+    floorHeight();
+    carouselHeight();
+
+    // sticky menu
+
+    var menu = document.querySelector('#header');
+    var origOffsetY = menu.offsetTop;
+
+    function scroll () {
+        if ($(window).scrollTop() > origOffsetY) {
+            $('#header').addClass('scroll');
+        } else {
+            $('#header').removeClass('scroll');
+        }
+    }
+
+    document.onscroll = scroll;
+
+    // search table
+
+    // var $main = $('table.data'),
+    // $head= $main.find('tr:first'),
+    // $extraRows = $main.find('tr:gt(6)');
+    //
+    // for( var i = 0; i < $extraRows.length; i = i+6) {
+    //    $('<div class="slide"><table class="data">').append($head.clone(), $extraRows.slice(i,i+6)).appendTo($main.parent());
+    //    //$('.table-slider').html('<div class="slide">' + $('<table class="data">').append($head.clone(), $extraRows.slice(i,i+6)).appendTo($main.parent()) + '</div>')
+    // }
+
+    floor = 0;
+    rooms = 0;
+    areaFrom = 0;
+    areaTo = 9999;
+    access = false;
+    mdm = false;
+    commercial = false;
+
+    // $(".checkbox").change(function() {
+    //     if(this.checked) {
+    //         //Do stuff
+    //     }
+    // });
+
+    // $('#rooms').on('change', function() {
+    //     rooms = $(this).val();
+    //     filterInvestments(floor, rooms, areaFrom, areaTo, access);
+    // });
+    //
+    // $('#type').on('change', function() {
+    //     type = $(this).val();
+    //     filterInvestments(floor, rooms, areaFrom, areaTo, access);
+    // });
+    //
+    // $('#check-taras').on('change', function() {
+    //     terrace = !terrace;
+    //     filterInvestments(floor, rooms, areaFrom, areaTo, access);
+    // });
+    // $('#check-garden').on('change', function() {
+    //     garden = !garden;
+    //     filterInvestments(floor, rooms, areaFrom, areaTo, access);
+    // });
+
+    $("input[name='floors']").change(function() {
+        $("input[name='floors']").not(this).prop('checked', false);
+        if($(this).prop('checked') === true){
+            floor = $(this).val();
+        }
+        else {
+            floor = 0;
+        }
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $("input[name='rooms']").change(function() {
+        $("input[name='rooms']").not(this).prop('checked', false);
+        if($(this).prop('checked') === true){
+            rooms = $(this).val();
+        }
+        else {
+            rooms = 0;
+        }
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $('#area-from').on("change paste keyup", function() {
+        areaFrom = $(this).val();
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $('#area-to').on("change paste keyup", function() {
+        areaTo = $(this).val();
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $('#accessibility').on('change', function() {
+        access = !access;
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $('#mdm').on('change', function() {
+        mdm = !mdm;
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    $('#commercial').on('change', function() {
+        commercial = !commercial;
+        filterInvestments(floor, rooms, areaFrom, areaTo, access, mdm, commercial);
+    });
+
+    // sliders
+
+    $('#top-slider').cycle ({
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        pager: '#top-slider ul.slider-pager',
+        pagerActiveClass: 'active',
+        pagerTemplate: '<li></li>',
+        swipe: true
+	});
+    $('#top-slider').on('cycle-after', function (e, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+        $(outgoingSlideEl).removeClass('show');
+        $(incomingSlideEl).addClass('show');
+    });
+    $('#top-slider').on('cycle-update-view', function (e, optionHash, slideOptionsHash, currentSlideEl) {
+        $(currentSlideEl).addClass('show');
+    });
+
+    $('#cg-slider').cycle ({
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        pager: '> ul.slider-pager',
+        pagerActiveClass: 'active',
+        pagerTemplate: '<li></li>',
+        next: '> ul.slider-nav li.right',
+        prev: '> ul.slider-nav li.left',
+        swipe: true
+	});
+
+    $('#carousel').cycle ({
+        fx: 'carousel',
+        carouselVisible: 2,
+        carouselVertical: true,
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        next: '#environment ul.carousel-nav li.bottom',
+        prev: '#environment ul.carousel-nav li.top',
+        swipe: true
+	});
+
+    $('#visualizations').cycle ({
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        pager: '> ul.slider-pager',
+        pagerActiveClass: 'active',
+        pagerTemplate: '<li></li>',
+        next: '> ul.slider-nav li.right',
+        prev: '> ul.slider-nav li.left',
+        swipe: true
+	});
+
+    $('#building').cycle ({
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        pager: '> ul.slider-pager',
+        pagerActiveClass: 'active',
+        pagerTemplate: '<li></li>',
+        next: '> ul.slider-nav li.right',
+        prev: '> ul.slider-nav li.left',
+        swipe: true
+	});
+
+    $('.table-slider').cycle ({
+		timeout: 0,
+        speed: 700,
+        pauseOnHover: false,
+        slides: '> .slide',
+        next: '#search button.next',
+        prev: '#search button.prev',
+        swipe: true
+	});
+
+    // locations
+
+    $('.scrollbar-inner').scrollbar();
+
+    $('#localization .category-icon').on('click', function() {
+        $('#localization .localization-list').addClass('open');
+        $('#localization .localization-list .inner ul li').removeClass('open');
+        $(this).parent().addClass('open');
+        $('.localization-list button.open').removeClass('show');
+        $('.localization-list button.close').addClass('show');
+    });
+
+    $('.localization-list button.open').on('click', function() {
+        $('#localization .localization-list').addClass('open');
+        //$(this).parent().addClass('open');
+        $('.localization-list button.open').removeClass('show');
+        $('.localization-list button.close').addClass('show');
+    });
+
+    $('.localization-list button.close').on('click', function() {
+        $('#localization .localization-list').removeClass('open');
+        $('#localization .localization-list .inner ul li').removeClass('open');
+        $('.localization-list button.close').removeClass('show');
+        $('.localization-list button.open').addClass('show');
+    });
+
+    $('.distances-wrap button.open').on('click', function() {
+        $('#localization .distances-wrap').addClass('open');
+        $('.distance-map').addClass('show');
+        $('#localization .map-trigger').addClass('show');
+        $('.distances-wrap button.open').removeClass('show');
+        $('.distances-wrap button.close').addClass('show');
+    });
+
+    $('.distances-wrap button.close').on('click', function() {
+        $('#localization .distances-wrap').removeClass('open');
+        $('.distance-map').removeClass('show');
+        $('#localization .map-trigger').removeClass('show');
+        $('.distances-wrap button.open').addClass('show');
+        $('.distances-wrap button.close').removeClass('show');
+    });
+
+    $('#localization .map-trigger').on('click', function() {
+        $('#localization .distances-wrap').removeClass('open');
+        $('.distance-map').removeClass('show');
+        $('#localization .map-trigger').removeClass('show');
+        $('.distances-wrap button.open').addClass('show');
+        $('.distances-wrap button.close').removeClass('show');
+    });
+
+    // Image map rwd
+
+    $('img[usemap]').rwdImageMaps();
+    $('#image-for-maping').maphilight({
+        fillColor: '03a3a3',
+        fillOpacity: 0.6,
+        stroke: false
+    });
+
+    $('#floor .building img.projection').maphilight({
+        fillColor: 'ffffff',
+        fillOpacity: 0.4,
+        stroke: false
+    });
+
+    // $('#floor area').hover(function() {
+    //     console.log('test');
+    // });
+
+    // gallery switcher
+
+    $('#gallery ul.gallery-bar li button').on('click', function() {
+
+        var target = $(this).data('target');
+
+        $('#gallery ul.gallery-bar li button').removeClass('current');
+        $('#gallery .gallery').removeClass('active');
+
+        $(this).addClass('current');
+        $('#gallery').find('div#' + target).addClass('active');
+
+    });
+
+});
+
+$(window).resize(function() {
+
+    cityDesignerHeight();
+    floorHeight();
+    carouselHeight();
+
+});
+
+
+
+
+
+var topPosition = 0;
+var rowHeight = $('table.data tr').height();
+var aa = rowHeight * 6;
+$('.table-slider').css('height', aa+'px');
+$('#search button.prev').addClass('disable');
+rowHeight = aa;
+
+
+$('#search button.next').click(function() {
+    var tableHeight = $('table.data').height() -  rowHeight;
+    if(topPosition >= - tableHeight) {
+        topPosition = topPosition - rowHeight;
+        console.log(top);
+        $('.table-slider table').css('top', topPosition+'px');
+        $(this).removeClass('disable');
+        $('#search button.prev').removeClass('disable');
+    }
+    else {
+        $(this).addClass('disable');
+        
+    }
+});
+$('#search button.prev').click(function() {
+    var tableHeight = $('table.data').height() -  rowHeight;
+    if(topPosition < 0) {
+        topPosition = topPosition + rowHeight;
+        console.log(top);
+        $('.table-slider table').css('top', topPosition+'px');
+        $(this).removeClass('disable');
+        $('#search button.next').removeClass('disable');
+    }
+    else {
+        $(this).addClass('disable');
+        
+    }
+});
+
+
+$('#image-map area').click(function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $('#'+target).addClass('active');
+});
+
+$('#floor .close').click(function() {
+    $(this).parent().removeClass('active');
+});
+
+
+$('#show-menu').click(function() {
+    $('#menu').toggleClass('visible');
+});
+$('#menu a').click(function() {
+    $('#menu').removeClass('visible');
+});
+
+
+$('#place ul.icons li').click(function() {
+    $(this).toggleClass('active');
+});
+
+

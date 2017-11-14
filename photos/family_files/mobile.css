@@ -1,0 +1,925 @@
+@media (max-width: 1550px) {
+
+	p {
+		font-size: 1.4rem;
+	    line-height: 2.0rem;
+		margin: 0 0 21px;
+	}
+	h3 {
+		line-height: 5.5rem;
+		font-size: 3.5rem;
+	}
+	table th,
+	table td {
+		padding: 20px 0 21px;
+	}
+	.container {
+		max-width: 1100px;
+	}
+	#top {
+	    padding: 140px 0 150px;
+	}
+	#top #header #menu ul li a {
+		font-size: 1.4rem;
+	}
+	#top #header .logo {
+	    margin: 36px 0 0 50px;
+	}
+	#top #header .logo img {
+		height: 60px;
+	}
+	#top #header.scroll .logo {
+	    margin: 21px 0 0 50px;
+	}
+	#top #header #menu {
+	    margin: 56px 23px 0 0;
+	}
+	#top #header .search {
+	    margin: 32px 0 0 0;
+	}
+	#top #top-slider {
+	    width: calc(100% - 130px);
+	    margin: 0 0 0 130px;
+	}
+	#top #top-slider .slide .inner {
+	    width: 680px;
+	    height: 580px;
+	}
+	#top #top-slider .slide .inner .text {
+	    left: 70px;
+	}
+	#top #top-slider .slide .inner .text h2 {
+	    line-height: 5.1rem;
+	    margin: 0 0 28px 0;
+	    font-size: 4.9rem;
+	}
+	#top #top-slider .slide .sticker {
+		top: 39px;
+		right: 64px;
+	    width: 200px;
+		height: 200px;
+	}
+	#place {
+	    padding: 128px 0 119px;
+	}
+	#place .text {
+		width: 565px;
+	}
+	#place ul.icons {
+		width: 500px;
+	}
+	#place .text p {
+		font-size: 1.4rem;
+	}
+	#place .text p.featured {
+		font-size: 1.8rem;
+	}
+	#place .text h3 {
+		padding-top: 40px;
+	}
+	#place ul.icons li {
+		height: 150px;
+	}
+	#place ul.icons li .inner p {
+		line-height: 1.5rem;
+		font-size: 1.2rem;
+	}
+	#city-garden, #environment, #localization {
+	    height: 750px;
+	}
+	#city-garden .slide-01 .city-map h5 {
+	    top: 110px;
+		left: calc(50% - 10px);
+	}
+	#city-garden ul.slider-pager {
+		bottom: 80px;
+	}
+	#city-garden .slide .text .inner p.featured {
+		font-size: 1.6rem;
+	}
+	#city-garden .slide .text .inner p {
+		font-size: 1.4rem;
+	}
+	#environment ul.carousel-nav li {
+	    width: 60px;
+	    height: 60px;
+	}
+	#environment ul.carousel-nav li {
+		background-size: 50%;
+	}
+	#environment .slide ul li .title h4 {
+	    line-height: 2.1rem;
+	    margin: 60px 0 0 0;
+	    font-size: 1.6rem;
+	}
+	#environment .slide {
+		height: 450px;
+	}
+	#localization .localization-list .button {
+		left: -80px;
+		width: 80px;
+		height: 80px;
+	}
+	#localization .distances-wrap > button {
+	    right: -80px;
+	    width: 80px;
+	    height: 80px;
+	    background-position: center 40px;
+		background-size: 50% auto;
+	}
+	#localization .localization-list .button button {
+		background-size: 50% 50%;
+	}
+	#localization .localization-list .button button.close {
+		background-size: 40% 40%;
+	}
+	#localization .localization-list .inner ul {
+	    margin: 65px 0 0 0;
+	}
+	#localization .localization-list .inner ul li {
+	    width: 100%;
+	    margin: 0 0 12px;
+	}
+	#localization .localization-list .inner ul li .category-icon {
+		width: 60px;
+		height: 60px;
+		background-size: 40%;
+	}
+	#localization .localization-list {
+		right: -255px;
+		width: 400px;
+	}
+	#localization .localization-list .inner ul li h5 {
+		font-size: 1.6rem;
+		padding-top: 19px;
+	}
+	#localization .localization-list .inner ul li ul li p, #localization .localization-list .inner ul li ul li span {
+		font-size: 1.4rem;
+		max-width:160px;
+	}
+	#localization .localization-list .inner ul li ul {
+		margin: 15px 0 0 100px;
+	}
+	#localization #map-canvas {
+		width: calc(100% - 145px);
+	}
+	#localization .distances-wrap .button {
+		right: -60px;
+		width: 60px;
+		height: 60px;
+	}
+	#localization .distances-wrap .button button.open {
+		background-position: center 30px;
+		background-size: 50%
+	}
+	#localization .distances-wrap .button button.close {
+		background-size: 40%;
+	}
+	#localization .localization-list .button {
+		left: -60px;
+		width: 60px;
+		height: 60px;
+	}
+	#search {
+		height: auto;
+		padding: 66px 0 50px;
+	}
+	#search button {
+		width: 60px;
+		height: 60px;
+		background-size: 30%;
+	}
+	#search .container {
+	    padding: 0 20px;
+	}
+	#search .filters p {
+	    line-height: 3.6rem;
+		margin: 0 10px 0 0;
+		font-size: 1.4rem;
+	}
+	#search .filters .commercial p {
+		line-height: 1.8rem;
+	}
+	#search .filters .area span {
+		line-height: 3.6rem;
+	}
+	#search .filters .checkbox label {
+	    width: 35px;
+		height: 35px;
+		line-height: 3.6rem;
+		font-size: 1.6rem;
+	}
+	#search .filters .area input {
+	    width: 35px;
+	    height: 35px;
+	}
+	#search table thead th, #search table tbody td {
+	    font-size: 1.4rem;
+	}
+	#search p.count {
+		margin: 45px 0 0 0;
+	}
+	#search .filters .floors, #search .filters .rooms {
+		margin-right: 20px;
+	}
+	#search .filters .accessibility, #search .filters .mdm, #search .filters .commercial {
+		margin-left: 20px;
+	}
+	#search .go-to {
+		height: 48px;
+		line-height: 5rem;
+		font-size: 1.6rem;
+	}
+	#search .go-to:before {
+		background-size: 75%;
+	}
+	#floor .sidebar h4 {
+	    line-height: 2.2rem;
+	    margin: 60px 0 0 0;
+	    font-size: 1.8rem;
+	}
+	#gallery {
+	    height: 750px;
+	}
+	#gallery .gallery ul.slider-nav li, #cg-slider ul.slider-nav li {
+	    width: 60px;
+	    height: 60px;
+	    background-size: 30%;
+	}
+	#gallery ul.gallery-bar li h3 {
+	    padding: 6px 24px 2px;
+	}
+	#gallery ul.gallery-bar li button {
+	    height: 50px;
+	    margin: 0px 0 0 0;
+	    padding: 0 20px;
+	    font-size: 1.8rem;
+	}
+	#gallery ul.gallery-bar {
+		left: 55%;
+	}
+	#developer {
+	    padding: 112px 0 100px;
+	}
+	#developer h3 {
+	    line-height: 4.5rem;
+	}
+	#financing {
+	    padding: 60px 0 80px;
+	}
+	#financing h3 {
+	    margin: 0 0 20px 0;
+	}
+	#financing ul.lists ul li p {
+		font-size: 1.4rem;
+	}
+	#financing ul.lists li h4 {
+		font-size: 1.8rem;
+	}
+	#financing .text {
+	    margin: 0 0 52px;
+	}
+	#finamax {
+	    padding: 61px 0 69px;
+	}
+	#finamax .text p {
+	    font-size: 2rem;
+	}
+	#finamax .text p span {
+	    font-size: 1.4rem;
+	}
+	#finamax .text ul li {
+	    margin: 0 100px 0 0;
+	}
+	#finamax .text ul li p {
+	    font-size: 1.4rem;
+	}
+	#contact {
+	    padding: 98px 0 95px;
+	}
+	#contact h3 {
+	    line-height: 3.6rem;
+	    margin: 0 0 34px 0;
+	    font-size: 3rem;
+	}
+	#contact h4 {
+	    line-height: 4.4rem;
+	    margin: 0 0 25px 0;
+	    padding: 0 18px 2px;
+	    font-size: 2rem;
+	}
+	#contact .left p.bigger {
+	    font-size: 2.6rem;
+	}
+	#contact .left p.bigger span {
+	    font-size: 1.6rem;
+	}
+	#contact .left p.smaller {
+		font-size: 1.4rem;
+	}
+	input[type="text"], input[type="email"], select, textarea {
+		height: 50px;
+		font-size: 1.4rem;
+	}
+	textarea {
+		height: 130px;
+	}
+	#footer {
+	    padding: 44px 0 41px;
+	}
+	#footer .text {
+		margin: 0 0 0 33px;
+	}
+	#footer .text p {
+		font-size: 1.4rem;
+	}
+	#footer .text p.color {
+		margin: 8px 0;
+	}
+	#footer ul.social {
+		margin-top: 22px;
+	}
+
+}
+
+@media (max-width: 1366px) {
+
+	#top {
+	    padding: 140px 0 110px;
+	}
+	#top #top-slider {
+	    width: calc(100% - 70px);
+	    margin: 0 0 0 70px;
+	}
+	#top #top-slider .slide .inner {
+	    width: 620px;
+	    height: 600px;
+	}
+	#top #top-slider .slide .inner .text {
+	    left: 40px;
+	}
+	#top #top-slider .slide .inner .text h2 {
+	    line-height: 4.1rem;
+	    margin: 0 0 25px 0;
+	    font-size: 3.9rem;
+	}
+	#top #top-slider .slide .sticker {
+	    top: 28px;
+	    right: 28px;
+	    width: 150px;
+	    height: 150px;
+	}
+	#place {
+	    padding: 88px 0 79px;
+	}
+	#place .text p.featured {
+	    margin: 0 0 40px 0;
+	    padding: 25px 0 26px;
+	    font-size: 1.9rem;
+	}
+	#place .text, #place ul.icons {
+	    width: calc(50% - 20px);
+	}
+	#city-garden {
+	    height: auto;
+	}
+	#city-garden .slide-01 .city-map {
+	    width: 35%;
+	}
+	#city-garden .slide-01 .city-map h5 {
+		top: 100px;
+	}
+	#city-garden .slide-01 .city-designer {
+		left: 35%;
+	}
+	#city-garden .slide-01 .text {
+		width: 48%;
+		height: auto;
+	    margin: 0 50px 0 0;
+		padding: 100px 0;
+	}
+	#city-garden ul.slider-pager {
+		bottom: 50px;
+	}
+	#city-garden .slide-01 .text .inner {
+	    position: relative;
+	    top: 0;
+	    -webkit-transform: translateY(0);
+	    		transform: translateY(0);
+	}
+	#city-garden .slide .text .inner p.featured {
+	    margin: 0 0 40px 0;
+	    padding: 25px 0 26px 0;
+	    font-size: 1.9rem;
+	}
+	#city-garden .slide .text .inner p {
+	    font-size: 1.7rem;
+	}
+	#city-garden .slide-02 ul.images {
+		width: 21%;
+	}
+	#city-garden .slide-02 .text {
+		width: 58%;
+	}
+	#environment, #localization {
+		height: 800px;
+	}
+	#environment .slide {
+		height: 400px;
+	}
+	#environment .slide ul li .title {
+	    width: 34%;
+	    padding: 0 20px;
+	}
+	#environment .slide ul li .image {
+		width: 66%;
+	}
+	#search .filters {
+		margin: 30px 0 0 0;
+	}
+	#gallery {
+		height: 700px;
+	}
+	#developer {
+	    padding: 80px 0 82px;
+	}
+	#contact {
+	    padding: 70px 0 72px;
+	}
+	#contact .left ul li {
+		width: 100%;
+	}
+
+}
+
+
+@media(max-width: 1199px) {
+	#top #top-slider .slide .inner {
+		height: 500px;
+	}
+	#top #top-slider .slide .inner ul.slider-pager {
+		bottom: 49px;
+	}
+	#city-garden .slide-01 .city-map h5 {
+		top: 60px;
+	}
+	#search .filters .floors, #search .filters .rooms {
+		margin-right: 15px;
+	}
+	#search .filters .accessibility, #search .filters .mdm, #search .filters .commercial {
+		margin-left: 15px;
+	}
+}
+
+
+@media(max-width: 800px) {
+	#top #top-slider .slide .inner {
+		height: 400px;
+		width: 450px;
+	}
+	#top #top-slider .slide .inner .text h2 {
+		line-height: 3.6rem;
+		margin: 0 0 15px 0;
+		font-size: 3.2rem;
+	}
+	#top #top-slider .slide .inner .text p {
+		margin: 0 0 25px 0;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+	#top #top-slider .slide .inner ul.slider-pager {
+		bottom: 29px;
+	}
+	#top #header #menu {
+		display: block;
+		position: fixed;;
+		width: 100%;
+		height: 100%;
+		background: white;
+		top: 0;
+		left: 100%;
+		margin: 0 !important;
+		padding: 40px 0;
+	}
+	#top #header #menu.visible {
+		left: 0;
+		padding: 28px 0;
+	}
+	.search {
+		display: block;
+		position:relative;
+		z-index:999;
+	}
+	#top #header #menu ul li {
+		display: block;
+		float: none;
+		text-align: center;
+		margin: 0 !important;
+	}
+	#top #header #menu ul {
+		width: 100%;
+	}
+	#place ul.icons li img {
+		max-width: 50px;
+		max-height: 50px;
+	}
+	#place ul.icons li {
+		height: 100px;
+	}
+	#place .text h3 {
+		padding-top: 0;
+		padding-bottom: 15px;
+	}
+	#place .text p.featured {
+		margin: 0 0 25px 0;
+		padding: 15px 0 16px;
+		font-size: 1.4rem;
+	}
+	#place ul.icons {
+		margin-top: 30px;
+	}
+	#place ul.icons li .inner p {
+		left: 5px;
+		right: 5px;
+		line-height: 1rem;
+		font-size: 0.8rem;
+	}
+
+	#environment .slide ul li .title {
+		width: 45%;
+	}
+	#environment .slide ul li .image {
+		width: 55%;
+	}
+	
+	
+	#floor .building {
+		width: 75%;
+	}
+	#floor .sidebar {
+		width: 25%;
+	}
+	
+	#gallery {
+		height: 600px;
+	}
+	#gallery ul.gallery-bar li button {
+		height: 40px;
+		font-size: 1.6rem;
+	}
+	#gallery ul.gallery-bar li h3 {
+		line-height: 4.4rem;
+		font-size: 2.4rem;
+	}
+	#gallery ul.gallery-bar {
+		top: 49px;
+	}
+	#gallery .gallery ul.slider-pager {
+		bottom: 49px;
+	}
+
+	#developer ul.projects li .inner img {
+		max-width: 80%;
+	}
+	#developer ul.projects li .inner a {
+		font-size: 1.4rem;
+		height: 30px;
+		line-height: 3rem;
+	}
+	#developer .developer-logo img {
+		width: 80px;
+	}
+
+
+	#finamax .text {
+		padding: 0 0 0 250px;
+	}
+	#finamax img {
+		width: 160px;
+	}
+	#finamax .text ul li {
+		margin: 0 10px 0 0;
+	}
+	#finamax .text ul {
+		margin-top: 14px;
+	}
+	#finamax {
+		padding: 41px 0 49px;
+	}
+
+	#contact .left, #contact .right {
+		width: 100%;
+	}
+}
+
+
+
+@media(max-width: 600px) {
+	h3 {
+		line-height: 3.5rem;
+		font-size: 2.5rem;
+	}
+	#top {
+		padding:85px 0 0px;
+	}
+	#top #top-slider {
+		margin: 0;
+		width: 100%;
+	}
+	#top #header .logo, #top #header.scroll .logo {
+		margin-left: 0;
+		margin-top: 18px;
+	}
+	#top #top-slider .slide .inner .text {
+		left: 20px;
+	}
+	#top #top-slider .slide .inner .text p {
+		max-width: 200px;
+	}
+	#top #top-slider .slide .inner {
+		width: 300px;
+	}
+	#top #top-slider .slide .inner ul.slider-pager {
+		margin: 0;
+		left: 15px;
+	}
+	#city-garden .slide-01 .city-map {
+		display: none;
+	}
+	#city-garden .slide-01 .text {
+		width: calc(100% - 70px);
+		margin: 0;
+		padding: 50px 35px;
+	}
+	#city-garden .slide-01 .city-designer {
+		display: none;
+	}
+	#city-garden .slide-02 .text {
+		width: calc(100% - 70px);
+		margin: 0;
+		padding: 50px 35px;
+	}
+	#city-garden .slide .text .inner p.featured {
+		margin: 0 0 20px 0;
+		padding: 15px 0 16px 0;
+		font-size: 1.4rem;
+	}
+	#city-garden .slide .text .inner p {
+		font-size: 1.2rem;
+	}
+	#city-garden .slide-02 ul.images.left, #city-garden .slide-02 ul.images.right {
+		display: none;
+	}
+	#city-garden .slide-02 .text .inner {
+		top: 50px;
+		right: 0;
+		left: 0;
+		padding: 0 35px;
+		-webkit-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	table, .table-slider {
+		width: 650px !important;
+	}
+	table th, table td {
+		padding: 10px 0;
+	}
+	#search button {
+		width: 30px;
+		height: 30px;
+	}
+	#search .table-container {
+		overflow-x: scroll;
+	}
+	#gallery .gallery ul.slider-nav li, #cg-slider ul.slider-nav li {
+		width: 30px;
+		height: 30px;
+	}
+	#place .text, #place ul.icons {
+		width: 100%;
+	}
+	#environment .slide ul li {
+		width: 100%;
+	}
+	#environment .slide {
+		height: 200px !important;
+	}
+	#environment .slide ul li .title h4 {
+		line-height: 1.8rem;
+		margin: 30px 0 0 0;
+		font-size: 1.4rem;
+	}
+	#developer h3 {
+		line-height: 3.5rem;
+	}
+	#developer ul.projects li {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+	#financing ul.lists > li {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#financing .text {
+		margin: 0 0 20px;
+	}
+	#financing ul.lists li h4 {
+		margin-bottom: 14px;
+	}
+	#financing ul.lists ul li:before {
+		top: 4px;
+	}
+	#localization .localization-list {
+		right: -1000px;
+		width: 280px;
+	}
+	#localization .localization-list .button {
+		left: -30px;
+		width: 30px;
+		height: 30px;
+	}
+	#localization .localization-list .inner ul li .category-icon {
+		width: 40px;
+		height: 40px;
+		background-size: 40%;
+	}
+	#localization #map-canvas {
+		width: 100%;
+	}
+	#localization .distances-wrap {
+		display: none;
+	}
+	#localization .localization-list .inner ul li h5 {
+		font-size: 1.4rem;
+		padding-top: 7px;
+		margin-left: 20px;
+	}
+	#localization .localization-list .inner ul li ul {
+		margin-left: 60px;
+	}
+	#localization .localization-list .inner {
+		padding: 0 22px;
+	}
+	#localization .localization-list .inner ul li ul li span {
+		width: 24px;
+	}
+	#localization .localization-list .inner ul li ul li p, #localization .localization-list .inner ul li ul li span {
+		font-size: 1.2rem;
+		max-width: 200px;
+	}
+
+	#finamax img {
+		position: relative;
+		-webkit-transform: translateY(0%);
+		transform: translateY(0%);
+		left: 0;
+		margin-bottom: 20px;
+	}
+	#finamax .text {
+		padding: 0;
+	}
+	#contact h4 {
+		line-height: 2.2rem;
+		margin: 0 0 25px 0;
+		padding: 10px;
+		font-size: 1.6rem;
+	}
+	#contact h3 {
+		line-height: 2.4rem;
+		margin: 0 0 24px 0;
+		font-size: 2rem;
+	}
+	#contact .left p.bigger {
+		font-size: 1.8rem;
+	}
+	#contact .contact-person img {
+		margin-bottom: 10px;
+		display: none;
+	}
+	#contact .contact-person .text {
+		width: 100%;;
+		left: -10px !important;
+		top: 0;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		position: relative;
+		float: left;
+	}
+	#footer .footer-logo {
+		margin-bottom: 10px;
+	}
+	#footer .text {
+		margin: 0;
+	}
+	input[type="text"], input[type="email"], select, textarea {
+		padding: 0 15px;
+	}
+	textarea {
+		padding: 15px;
+	}
+	#top #header .logo img {
+		height: 40px;
+	}
+	#top #header.scroll {
+		min-height: 80px;
+	}
+
+	#environment, #localization {
+		height: 400px;
+	}
+	#floor .building {
+		width: 100%;
+	}
+	#floor .sidebar {
+		width: 100%;
+		padding: 0 20px 55px;
+		height:initial !important;
+
+
+	}
+	#floor .sidebar h4 {
+		margin-top: 20px;
+	}
+	#floor .sidebar h4:after {
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		bottom: -36px;
+		left: 5px;
+	}
+	#floor .close {
+		width: 40px;
+		height: 20px;
+		top: 3%;
+	}
+	#gallery {
+		height: 400px;
+	}
+	#search .filters .floors, #search .filters .rooms, #search .filters .area, #search .filters .accessibility, #search .filters .mdm, #search .filters .commercial {
+		float: none;
+		width: 100%;
+		display: block;
+		height: 36px;
+		margin-bottom: 5px;
+	}
+	#search .filters .accessibility .checkbox, #search .filters .mdm .checkbox, #search .filters .commercial .checkbox {
+		float: none;
+	}
+	#search .filters .accessibility, #search .filters .mdm, #search .filters .commercial {
+		margin-left: 0;
+	}
+	#search .filters p {
+		width: 110px;
+	}
+	#search .filters p:last-child {
+		width: initial;
+	}
+	#search .go-to {
+		line-height: 2rem;
+		font-size: 1.2rem;
+		padding: 14px 12px 0 67px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#search button {
+		top: 75%;
+	}
+	#search h3 {
+		line-height: 35px;
+		margin-bottom: 15px;
+	}
+	#top #top-slider .slide {
+		background-size: cover;
+	}
+	#top #top-slider .slide .inner {
+		width: 250px;
+	}
+	#developer .developer-logo img {
+		width: 60px;
+	}
+	#developer h3 {
+		float: left;
+		width: 80%;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	#developer .developer-logo {
+		width: 20%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

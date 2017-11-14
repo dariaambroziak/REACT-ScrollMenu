@@ -1,0 +1,31 @@
+/* 
+Theme Name: Nove Stare Włochy
+Author: Bartek Konopka
+Author URI: http://bartekkonopka.pl/
+Version: 1.0
+*/
+
+
+
+.table-slider {
+	overflow: hidden;
+}
+.table-slider table {
+	position: relative;
+}
+#search button.prev.disable, #search button.next.disable {
+	opacity: 0.25;
+}
+
+span.wpcf7-not-valid-tip {
+	float: left;
+	width: 100%;
+}
+
+#top #top-slider .slide .inner .text a {
+	background: #f4e822;
+	color: #080705;
+}
+#top #top-slider .slide .inner .text a:before {
+	background: #f4e822;
+}

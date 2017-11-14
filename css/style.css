@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  font-size: 14px;
+  background-color: #f7f7f7; }
+
+.nav {
+  position: fixed;
+  background-color: white;
+  height: 63px;
+  width: 100%; }
+
+.navList {
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  text-align: center; }
+
+.decoration {
+  float: left;
+  line-height: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  padding: 15px; }
+
+.decoration:hover {
+  transform: scale(1.3); }
+
+.mainFloatRight {
+  width: 100%; }
+
+.orange {
+  width: 100%;
+  height: 600px;
+  background: orange; }
+
+.green {
+  width: 100%;
+  height: 600px;
+  background: green; }
+
+.red {
+  width: 100%;
+  height: 600px;
+  background: red; }
+
+.blue {
+  width: 100%;
+  height: 600px;
+  background: blue; }
+
+.pink {
+  width: 100%;
+  height: 600px;
+  background: pink; }
+
+.grey {
+  width: 100%;
+  height: 600px;
+  background: grey; }
+
+.purple {
+  width: 100%;
+  height: 600px;
+  background: purple; }
+
+.black {
+  width: 100%;
+  height: 600px;
+  background: black; }
+
+.orangeLi {
+  color: orange; }
+
+.greenLi {
+  color: green; }
+
+.redLi {
+  color: red; }
+
+.blueLi {
+  color: blue; }
+
+.pinkLi {
+  color: pink; }
+
+.greyLi {
+  color: grey; }
+
+.purpleLi {
+  color: purple; }
+
+.blackLi {
+  color: black; }
