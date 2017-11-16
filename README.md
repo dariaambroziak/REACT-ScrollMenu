@@ -2,8 +2,9 @@
 
 TECHNOLOGIES: HTML5, CSS, SASS, REACT, RWD, API, GULP, WEBPACK
 
-<a href="https://dariaambroziak.github.io/REACT-ScrollMenu/">DEMO</a>
+<a href="https://dariaambroziak.github.io/REACT-ScrollMenu/">Simple scroll menu</a>
 
 Installation:
 
-1.Write in a terminal git clone ... to clone repository 2.Write in a terminal npm install to install all deps
+Write in a terminal git clone https://github.com/dariaambroziak/REACT-ScrollMenu.git to clone repository. 
+Write in a terminal npm install to install all deps
