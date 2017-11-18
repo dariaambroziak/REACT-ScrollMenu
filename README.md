@@ -1,6 +1,6 @@
 # REACT-ScrollMenu
 
-TECHNOLOGIES: HTML5, CSS, SASS, REACT, RWD, API, GULP, WEBPACK
+TECHNOLOGIES: HTML5, CSS, SASS, REACT, GULP, WEBPACK
 
 <a href="https://dariaambroziak.github.io/REACT-ScrollMenu/">Simple scroll menu</a>
 
