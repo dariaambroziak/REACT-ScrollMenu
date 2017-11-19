@@ -78,42 +78,42 @@ class SectionNav extends React.Component {
             <ul className=' navList'>
               <li>
                  <IndexLink  to="/orange"
-                 className='orangeLi decoration hover paddingTop'
+                 className='orangeLi decoration col-sm-3 col-md-2 col-lg-2'
                  onClick={() => scrollToComponent(this.Orange, {align: 'middle',ease:'inCirc',  duration: 1000})}>ORANGE</IndexLink>
               </li>
               <li>
 								<IndexLink  to="/green"
-								className='greenLi decoration hover paddingTop'
+								className='greenLi decoration col-sm-3 col-md-2 col-lg-2'
 								onClick={() => scrollToComponent(this.Green, {align: 'middle',ease:'inCirc',  duration: 1000})}>GREEN</IndexLink>
 							</li>
               <li>
 								<IndexLink  to="/red"
-								className='redLi decoration hover'
+								className='redLi decoration col-sm-3 col-md-1 col-lg-1'
 								onClick={() => scrollToComponent(this.Red, {align: 'middle', ease:'inCirc', duration: 1000})}>RED</IndexLink>
 							</li>
               <li>
 								<IndexLink  to="/blue"
-								className='blueLi decoration hover'
+								className='blueLi decoration col-sm-3 col-md-1 col-lg-1'
 								onClick={() => scrollToComponent(this.Blue, {align: 'middle', ease:'inCirc', duration: 1000})}>BLUE</IndexLink>
 							</li>
               <li>
                 <IndexLink  to="/grey"
-                className='greyLi decoration hover'
+                className='greyLi decoration col-sm-3 col-md-1 col-lg-1'
                 onClick={() => scrollToComponent(this.Grey, { align: 'middle',ease:'inCirc', duration: 1000})}>GREY</IndexLink>
               </li>
               <li>
 								<IndexLink  to="/pink"
-								className='pinkLi decoration hover'
+								className='pinkLi decoration col-sm-3 col-md-1 col-lg-1'
 								onClick={() => scrollToComponent(this.Pink, { align: 'middle',ease:'inCirc', duration: 1000})}>PINK</IndexLink>
 							</li>
               <li>
 								<IndexLink  to="/purple"
-								className='purpleLi decoration hover'
+								className='purpleLi decoration col-sm-3 col-md-2 col-lg-2'
 								onClick={() => scrollToComponent(this.Purple, {align: 'middle',ease:'inCirc',  duration: 1000})}>PURPLE</IndexLink>
 							</li>
               <li>
 								<IndexLink  to="/black"
-								className='blackLi decoration hover'
+								className='blackLi decoration col-sm-3 col-md-2 col-lg-2'
 								onClick={() => scrollToComponent(this.Black, {align: 'middle',ease:'inCirc',  duration: 1000})}>BLACK</IndexLink>
 							</li>
             </ul>

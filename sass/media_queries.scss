@@ -1,0 +1,63 @@
+/* Creating -GRID- 12 columns */
+
+$tablet-width: 330px;
+$desktop-width: 1024px;
+$columnNo: 12;
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+}
+
+.row:before,
+.row:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+[class*=col-]{
+	float: left;
+	padding: 0;
+
+	&.collapsed {
+		padding: 0;
+	}
+}
+
+@for $i from 1 through $columnNo {
+	.col-sm-#{$i} {
+		width: 100/$columnNo * $i + %;
+	}
+}
+
+@include tablet {
+	@for $i from 1 through $columnNo {
+		.col-md-#{$i} {
+			width: 100/$columnNo * $i + %;
+		}
+	}
+}
+
+@include desktop {
+	@for $i from 1 through $columnNo {
+		.col-lg-#{$i} {
+			width: 100/$columnNo * $i + %;
+		}
+	}
+}

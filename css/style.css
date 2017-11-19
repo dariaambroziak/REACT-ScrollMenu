@@ -1,3 +1,167 @@
+/* Creating -GRID- 12 columns */
+* {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%; }
+
+.row:before,
+.row:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+[class*=col-] {
+  float: left;
+  padding: 0; }
+  [class*=col-].collapsed {
+    padding: 0; }
+
+.col-sm-1 {
+  width: 8.33333%; }
+
+.col-sm-2 {
+  width: 16.66667%; }
+
+.col-sm-3 {
+  width: 25%; }
+
+.col-sm-4 {
+  width: 33.33333%; }
+
+.col-sm-5 {
+  width: 41.66667%; }
+
+.col-sm-6 {
+  width: 50%; }
+
+.col-sm-7 {
+  width: 58.33333%; }
+
+.col-sm-8 {
+  width: 66.66667%; }
+
+.col-sm-9 {
+  width: 75%; }
+
+.col-sm-10 {
+  width: 83.33333%; }
+
+.col-sm-11 {
+  width: 91.66667%; }
+
+.col-sm-12 {
+  width: 100%; }
+
+@media (min-width: 330px) {
+  .col-md-1 {
+    width: 8.33333%; }
+  .col-md-2 {
+    width: 16.66667%; }
+  .col-md-3 {
+    width: 25%; }
+  .col-md-4 {
+    width: 33.33333%; }
+  .col-md-5 {
+    width: 41.66667%; }
+  .col-md-6 {
+    width: 50%; }
+  .col-md-7 {
+    width: 58.33333%; }
+  .col-md-8 {
+    width: 66.66667%; }
+  .col-md-9 {
+    width: 75%; }
+  .col-md-10 {
+    width: 83.33333%; }
+  .col-md-11 {
+    width: 91.66667%; }
+  .col-md-12 {
+    width: 100%; } }
+
+@media (min-width: 1024px) {
+  .col-lg-1 {
+    width: 8.33333%; }
+  .col-lg-2 {
+    width: 16.66667%; }
+  .col-lg-3 {
+    width: 25%; }
+  .col-lg-4 {
+    width: 33.33333%; }
+  .col-lg-5 {
+    width: 41.66667%; }
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-7 {
+    width: 58.33333%; }
+  .col-lg-8 {
+    width: 66.66667%; }
+  .col-lg-9 {
+    width: 75%; }
+  .col-lg-10 {
+    width: 83.33333%; }
+  .col-lg-11 {
+    width: 91.66667%; }
+  .col-lg-12 {
+    width: 100%; } }
+
+@media (max-width: 330px) {
+  .nav {
+    position: fixed;
+    background-color: white;
+    height: 45px;
+    width: 100%; }
+  .navList {
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    text-align: center; }
+  .decoration {
+    float: left;
+    font-size: 16px;
+    text-decoration: none;
+    color: black; }
+  .decoration:hover {
+    transform: scale(1.3); } }
+
+@media (min-width: 331px) and (max-width: 1024px) {
+  .nav {
+    position: fixed;
+    background-color: white;
+    height: 30px;
+    width: 100%; }
+  .navList {
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    text-align: center; }
+  .decoration {
+    float: left;
+    font-size: 16px;
+    text-decoration: none;
+    color: black; }
+  .decoration:hover {
+    transform: scale(1.2); } }
+
+@media (min-width: 1025px) {
+  .nav {
+    position: fixed;
+    background-color: white;
+    height: 45px;
+    width: 100%; }
+  .navList {
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    text-align: center; }
+  .decoration {
+    float: left;
+    font-size: 28px;
+    text-decoration: none;
+    color: black; }
+  .decoration:hover {
+    transform: scale(1.2); } }
+
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -6,72 +170,64 @@ body {
   font-size: 14px;
   background-color: #f7f7f7; }
 
-.nav {
-  position: fixed;
-  background-color: white;
-  height: 63px;
-  width: 100%; }
-
-.navList {
-  padding: 0;
-  list-style: none;
-  height: 100%;
-  text-align: center; }
-
-.decoration {
-  float: left;
-  line-height: 20px;
-  font-size: 30px;
-  text-decoration: none;
-  color: black;
-  margin: 5px;
-  padding: 15px; }
-
-.decoration:hover {
-  transform: scale(1.3); }
-
 .mainFloatRight {
   width: 100%; }
 
 .orange {
   width: 100%;
   height: 600px;
-  background: orange; }
+  background-image: url(../photos/seascape.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .green {
   width: 100%;
   height: 600px;
-  background: green; }
+  background-image: url(../photos/glade.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .red {
   width: 100%;
   height: 600px;
-  background: red; }
+  background-image: url(../photos/sunsetII.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .blue {
   width: 100%;
   height: 600px;
-  background: blue; }
+  background-image: url(../photos/sea.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .pink {
   width: 100%;
   height: 600px;
-  background: pink; }
+  background-image: url(../photos/lake.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .grey {
   width: 100%;
   height: 600px;
-  background: grey; }
+  background-image: url(../photos/scene.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .purple {
   width: 100%;
   height: 600px;
-  background: purple; }
+  background-image: url(../photos/lilac.png);
+  background-size: cover;
+  background-position: center; }
 
 .black {
   width: 100%;
   height: 600px;
-  background: black; }
+  background-image: url(../photos/shadow-tree.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .orangeLi {
   color: orange; }

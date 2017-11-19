@@ -13861,7 +13861,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/orange',
-                    className: 'orangeLi decoration hover paddingTop',
+                    className: 'orangeLi decoration col-sm-3 col-md-2 col-lg-2',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Orange, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13874,7 +13874,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/green',
-                    className: 'greenLi decoration hover paddingTop',
+                    className: 'greenLi decoration col-sm-3 col-md-2 col-lg-2',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Green, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13887,7 +13887,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/red',
-                    className: 'redLi decoration hover',
+                    className: 'redLi decoration col-sm-3 col-md-1 col-lg-1',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Red, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13900,7 +13900,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/blue',
-                    className: 'blueLi decoration hover',
+                    className: 'blueLi decoration col-sm-3 col-md-1 col-lg-1',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Blue, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13913,7 +13913,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/grey',
-                    className: 'greyLi decoration hover',
+                    className: 'greyLi decoration col-sm-3 col-md-1 col-lg-1',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Grey, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13926,7 +13926,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/pink',
-                    className: 'pinkLi decoration hover',
+                    className: 'pinkLi decoration col-sm-3 col-md-1 col-lg-1',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Pink, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13939,7 +13939,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/purple',
-                    className: 'purpleLi decoration hover',
+                    className: 'purpleLi decoration col-sm-3 col-md-2 col-lg-2',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Purple, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
@@ -13952,7 +13952,7 @@ var SectionNav = function (_React$Component) {
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
                   { to: '/black',
-                    className: 'blackLi decoration hover',
+                    className: 'blackLi decoration col-sm-3 col-md-2 col-lg-2',
                     onClick: function onClick() {
                       return (0, _reactScrollToComponent2.default)(_this2.Black, { align: 'middle', ease: 'inCirc', duration: 1000 });
                     } },
